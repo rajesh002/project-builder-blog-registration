@@ -10,7 +10,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-
+import businesslogic.RegistrationValidation;
+import model.User;
 
 @WebServlet(urlPatterns= {"/signup"})
 public class SignUpController extends HttpServlet {
@@ -35,7 +36,7 @@ public class SignUpController extends HttpServlet {
 		String confirmPassword = request.getParameter("confirmPassword"); 
 		LocalDateTime date= LocalDateTime.now(); 
 		
-
+		RegistrationValidation checkUser = new RegistrationValidation();
 		
 		if(checkUser.checkUserDetails(email, password, confirmPassword))
 		{

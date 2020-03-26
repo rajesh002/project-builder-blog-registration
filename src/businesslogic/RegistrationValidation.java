@@ -7,7 +7,7 @@ public class RegistrationValidation{
 		else 
 		return false;
 	}
-	private boolean validPassword(String password, String confirmPassword) {
+	public boolean validPassword(String password, String confirmPassword) {
 		String smallAlpha="abcdefghijklmnopqrstuwxyz";
 		String numbers="1234567890";
 		String capAlpha="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -22,7 +22,7 @@ public class RegistrationValidation{
 	
 	
 	
-	private boolean validEmail(String email) {
+	public boolean validEmail(String email) {
 		String alpha="abcdefghijklmnopqrstuwxyz";
 		String numbers="1234567890";
 		String spclChars="_-,@.,";

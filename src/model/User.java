@@ -1,34 +1,35 @@
 package model;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 
 public class User{
-	String name;
-	int email;
-	LocalDate date;
-	public User(String name,int email,LocalDate date){
-		this.name=name;
-		this.email=email;
-		this.date=date;
+	String password;
+	String email;
+	LocalDateTime date;
+	public User(String name,String password,LocalDateTime date2){
+		this.password=name;
+		this.email=password;
+		this.date=date2;
 		
 	}
-	public void setName(String name) {
-		this.name=name;
+	public void setPassword(String name) {
+		this.password=name;
 	}
-	public void setEmail(int email) {
+	public void setEmail(String email) {
 		this.email=email;
 	}
-	public void setDate(LocalDate date) {
-		this.date=date;
+	public void setDate(LocalDateTime ld) {
+		this.date=ld;
 	}
-	public String getName() {
-		return this.name;
+	public String getPassword() {
+		return this.password;
 	}
-	public int getEmail() {
+	public String getEmail() {
 		return this.email;
 	}
-	LocalDate getDate() {
+   public LocalDateTime getDate() {
 		return this.date;
 	}
 	
